@@ -481,7 +481,7 @@ export default function PortfolioPage() {
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
                       transition={{ ...transition, delay: 0.1 }}
-                      className="text-6xl md:text-9xl font-bold tracking-tighter text-gray-900 leading-[0.85] mb-2 md:mb-4"
+                      className="text-6xl md:text-9xl font-bold tracking-tighter text-gray-900 leading-[0.85] mb-2 py-4 md:mb-4"
                     >
                       Digital
                     </motion.h1>
@@ -491,7 +491,7 @@ export default function PortfolioPage() {
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
                       transition={{ ...transition, delay: 0.2 }}
-                      className="text-6xl md:text-9xl font-bold tracking-tighter text-gray-900 leading-[0.85] flex items-center gap-4"
+                      className="text-6xl md:text-9xl font-bold tracking-tighter text-gray-900 leading-[0.85] flex items-center py-8 gap-4"
                     >
                       Intelligence<span className="text-violet-600">.</span>
                     </motion.h1>
