@@ -87,6 +87,35 @@ const projectData = [
     ],
     videoPath: "/assets/projects/dentist/demo.mp4",
     liveLink: "https://example.com"
+  },
+    {
+    id: 'Home Decore Store',
+    title: "Modern House",
+    category: "Home decore",
+    client: "modern house",
+    year: "2023",
+    shortDesc: "Trust-centered medical UI with HIPAA-compliant intake.",
+    fullDesc: "the luxy is the currency of Modern House. We designed Modern House brand digital presence to exude calm professionalism. The integrated 'HouseBot' handles sensitive patient intake, symptom triage, and scheduling, significantly reducing administrative overhead while maintaining strict data privacy.",
+    aiFeatures: [
+      "Symptom Triage System",
+      "Automated Post-op Care Guide",
+      "Secure Patient Portal Sync",
+      "Smart Reminders"
+    ],
+    techStack: ["React", "Python", "TensorFlow", "PostgreSQL"],
+    coverImage: "/assets/projects/HomeDecore/cover.jpg",
+    galleryImages: [
+      "/assets/projects/HomeDecore/home (1).png",
+      "/assets/projects/HomeDecore/home (2).png",
+      "/assets/projects/HomeDecore/home (3).png",
+      "/assets/projects/HomeDecore/home (4).png",
+      "/assets/projects/HomeDecore/home (5).png",
+      "/assets/projects/HomeDecore/home (6).png",
+      
+     
+    ],
+    videoPath: "/assets/projects/dentist/demo.mp4",
+    liveLink: "https://example.com"
   }
 ];
 
@@ -351,6 +380,276 @@ const ProjectModal = ({ project, onClose }) => {
     </>
   );
 };
+const SocialMediaAIAgent = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const modalVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.95,
+      y: 50
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 25,
+        stiffness: 300
+      }
+    },
+    exit: { 
+      opacity: 0, 
+      scale: 0.95,
+      y: 50,
+      transition: {
+        duration: 0.2
+      }
+    }
+  };
+
+  const backdropVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: {
+        duration: 0.3
+      }
+    },
+    exit: { 
+      opacity: 0,
+      transition: {
+        duration: 0.2
+      }
+    }
+  };
+
+  return (
+    <>
+      {/* Main Section */}
+      <section className="py-24 px-6 md:px-16 max-w-[1600px] mx-auto">
+        <div className="flex items-center gap-4 mb-12">
+          <span className="w-3 h-3 bg-violet-600 rounded-full animate-pulse" />
+          <span className="text-sm font-bold tracking-widest uppercase text-gray-400">Featured Solution</span>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+            className="space-y-8"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+              Automate Instagram DMs
+              <br />
+              <span className="text-violet-600">with AI Support</span>
+            </h2>
+            
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Brands receive hundreds of daily Instagram DM inquiries but lack the resources to respond promptly. Our AI Agent provides instant, intelligent customer support without hiring additional staff.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-violet-600" />
+                  <span className="font-medium text-gray-900">Instant Replies</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-violet-600" />
+                  <span className="font-medium text-gray-900">24/7 Availability</span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-violet-600" />
+                  <span className="font-medium text-gray-900">Cost Reduction</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-violet-600" />
+                  <span className="font-medium text-gray-900">Scalable Support</span>
+                </div>
+              </div>
+            </div>
+
+            <motion.button
+              onClick={() => setIsModalOpen(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-8 inline-flex items-center gap-3 px-8 py-4 bg-violet-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              See Project
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative bg-gradient-to-br from-violet-50 to-blue-50 p-1 rounded-2xl shadow-xl">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="aspect-video bg-gradient-to-r from-violet-100 to-blue-100 rounded-xl flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-violet-600/10 to-blue-600/10"></div>
+                  <div className="relative z-10 text-center space-y-4">
+                    <img src="/aiagent.jpg" alt="" />
+                  </div>
+                </div>
+                
+                <div className="mt-6 space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Messages Processed</span>
+                    <span className="text-lg font-bold text-violet-600">2,450+</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <span className="text-sm font-medium text-gray-700">Response Time</span>
+                    <span className="text-lg font-bold text-violet-600">&lt; 5s</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            variants={backdropVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            onClick={() => setIsModalOpen(false)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+          >
+            <motion.div
+              variants={modalVariants}
+              onClick={(e) => e.stopPropagation()}
+              className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <div className="flex items-center gap-3">
+                  <Bot className="w-6 h-6 text-violet-600" />
+                  <h3 className="text-xl font-bold text-gray-900">Social Media AI Agent</h3>
+                </div>
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                >
+                  <X className="w-5 h-5 text-gray-500" />
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 max-h-[80vh] overflow-y-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  {/* Left Column */}
+                  <div className="space-y-8">
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-4">What It Does</h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        Our AI Agent automatically handles customer support via Instagram Direct Messages, providing instant, intelligent responses to common inquiries, order status requests, product information, and more—without human intervention.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-4">How It Works</h4>
+                      <ul className="space-y-3 text-gray-600">
+                        <li className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-violet-600 mt-1 flex-shrink-0" />
+                          <span>Connects directly to your Instagram Business account via API</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-violet-600 mt-1 flex-shrink-0" />
+                          <span>Monitors incoming DMs in real-time and categorizes message intent</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-violet-600 mt-1 flex-shrink-0" />
+                          <span>Generates contextually appropriate responses using natural language processing</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-violet-600 mt-1 flex-shrink-0" />
+                          <span>Escalates complex issues to human agents with full conversation history</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-4">Target Users</h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        E-commerce brands, retail companies, service providers, and any business receiving high volumes of customer inquiries through Instagram Direct Messages seeking to improve response times and reduce operational costs.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Right Column */}
+                  <div className="space-y-8">
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-4">Key Features</h4>
+                      <div className="space-y-4">
+                        {[
+                          "24/7 Automated Responses",
+                          "Multi-Language Support",
+                          "Sentiment Analysis & Escalation",
+                          "Customizable Response Templates",
+                          "Performance Analytics Dashboard",
+                          "Seamless Human Handoff",
+                          "Brand Voice Customization",
+                          "Compliance & Data Security"
+                        ].map((feature, index) => (
+                          <div key={index} className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <CheckCircle2 className="w-5 h-5 text-violet-600" />
+                            <span className="text-gray-700">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-4">Business Value</h4>
+                      <div className="space-y-4">
+                        <div className="p-5 bg-gradient-to-r from-violet-50 to-blue-50 rounded-xl border border-violet-100">
+                          <h5 className="font-semibold text-gray-900 mb-2">⏱️ Time Savings</h5>
+                          <p className="text-gray-600 text-sm">Reduce manual response time by up to 90%, freeing staff for higher-value tasks.</p>
+                        </div>
+                        <div className="p-5 bg-gradient-to-r from-violet-50 to-blue-50 rounded-xl border border-violet-100">
+                          <h5 className="font-semibold text-gray-900 mb-2">💰 Cost Reduction</h5>
+                          <p className="text-gray-600 text-sm">Eliminate need for dedicated social media support staff, reducing operational expenses.</p>
+                        </div>
+                        <div className="p-5 bg-gradient-to-r from-violet-50 to-blue-50 rounded-xl border border-violet-100">
+                          <h5 className="font-semibold text-gray-900 mb-2">📈 Improved Engagement</h5>
+                          <p className="text-gray-600 text-sm">Maintain consistent brand presence with instant replies, increasing customer satisfaction and conversion rates.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="p-6 border-t border-gray-200 bg-gray-50 flex justify-end">
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="px-6 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
 
 // 3. Project Card - Premium Lift & Depth
 const ProjectCard = ({ project, onClick }) => (
@@ -511,6 +810,9 @@ export default function PortfolioPage() {
             </div>
           </motion.div>
         </section>
+         <>
+            <SocialMediaAIAgent />
+          </>
 
         {/* Gallery Grid */}
         <section id="work" className="pb-32 px-6 md:px-16 max-w-[1600px] mx-auto">
@@ -535,6 +837,7 @@ export default function PortfolioPage() {
               </motion.div>
             ))}
           </div>
+         
 
           {/* Call to Action */}
           <motion.div 
@@ -563,6 +866,10 @@ export default function PortfolioPage() {
             </div>
           </motion.div>
         </section>
+        {/* Project Modal  */}
+        
+          
+          
       </div>
 
       <AnimatePresence>
