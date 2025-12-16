@@ -27,7 +27,7 @@ const ACCENT_COLOR = '#5a189a'; // Muted deep red / terracotta
 const BG_COLOR = '#ffffff'; // Warm light beige / off-white
 const FOOTER_BG_COLOR = '#e9e6ff'; // Slightly darker beige
 
-const AI_ASSISTANT_WEBHOOK = 'https://neronexaai2025.app.n8n.cloud/webhook/neuronexa-chatbot';
+const AI_ASSISTANT_WEBHOOK = 'https://newauto2025.app.n8n.cloud/webhook/neuronexa-ai-agent';
 
 // --- Utility Components ---
 
